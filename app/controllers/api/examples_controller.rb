@@ -35,17 +35,15 @@ class Api::ExamplesController < ApplicationController
 
   def body_params_action
     @message = "The secret info is #{params[:secret_info]}"
-    render body_params.json.jb
+    render "body_params.json.jb"
   end
 
-  def body_credentials_action 
-    @message = "Invalid credentials."
-    if params[:user_name].downcase == "hugh" && params[:password].downcase == "swordfish"
-      @message = "Valid credentials."
-    end 
-
-    render "body_guess.json.jb"
+  def body_credentials_action
+    @message = "Invalid Credentials"
+    if params[:username] == "hugh" && params[:password] == "swordfish"
+      @message = "Valid Credentials"
+    end
+    render "body_credentials.json.jb"
   end
-
 
 end

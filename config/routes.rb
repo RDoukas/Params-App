@@ -13,6 +13,6 @@ Rails.application.routes.draw do
 
     post "/body_params_url" => "examples#body_params_action"
     post "/body_guess_url" => "examples#query_guess_action"
-    post "/boddy_credentials_url" => "examples#body_credentials_action"
+    post "/body_credentials_url" => "examples#body_credentials_action"
   end
 end
